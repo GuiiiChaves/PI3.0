@@ -1,0 +1,46 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Estilos do container de filmes */
+  .movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .movie-card {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .movie-card:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  .movie-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Estilos do rodapé */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  h1{
+    text-align: center;
+  }

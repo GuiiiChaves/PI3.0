@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuapTour</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="pi.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        /* Estilo para o conteúdo principal */
+        .content {
+            padding: 20px;
+        }
+
+        /* Estilo para o rodapé (footer) */
+        footer {
+            background-color: whitesmoke;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Estilo para a barra de navegação */
+        .navbar {
+            background-color: white;
+            overflow: hidden;
+            box-shadow: 5px 5px 10px white;
+            position: relative; /* Alterado para relativo */
+            z-index: 1; /* Ordem de empilhamento alta */
+        }
+
+        #map {
+            height: 70vh;
+            width: 100%;
+            position: relative; /* Alterado para relativo */
+            z-index: 0; /* Ordem de empilhamento mais baixa */
+        }
+    </style>
+</head>
+<body>
+
+<!--Menu -->
+<input type="checkbox" id="active">
+<label for="active" class="menu-btn"><span></span></label>
+<label for="active" class="close"></label>
+
+<div class="navbar">
+    <img src="logosuaptour.jpg" alt="logo-suaptour" class="logo">
+</div>
+
+<div class="wrapper">
+    <ul>
+        <li><a href="pi.html">Início</a></li>
+        <li><a href="com.html">Serviços</a></li>
+        <li><a href="lazer.html">Lazer</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="noticias.html">Novidades</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+    </ul>
+</div>
+
+<div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-8.395194, -34.964031], 13); // Define as coordenadas de Recife
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        // Adicione um marcador para a localização do usuário
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var userLat = position.coords.latitude;
+            var userLng = position.coords.longitude;
+            L.marker([userLat, userLng]).addTo(map)
+                .bindPopup('Sua Localização Atual')
+                .openPopup();
+        });
+
+        // Adicione marcadores para pontos pré-cadastrados em Recife
+        var points = [
+        { name: "Porto de Suape", latlng: [-8.393497, -34.997722] },
+            { name: "Complexo Industrial Portuário de Suape", latlng: [-8.402558, -35.007954] },
+            { name: "Praia de Suape", latlng: [-8.378678,  -34.994856] }, 
+            { name: "Parque Tecnológico de Suape", latlng: [-8.405000, -34.969333] },
+            { name: "Porto de Cruzeiros de Suape", latlng: [-8.391444,  -34.970778] },
+            { name: "Terminal de Contêineres de Suape (Tecon Suape)", latlng: [-8.390722, -34.970222] }
+            
+        ];
+
+        points.forEach(function (point) {
+            L.marker(point.latlng).addTo(map).bindPopup(point.name);
+        });
+
+        // Atualize o tamanho do mapa quando a janela for redimensionada
+        window.addEventListener('resize', function () {
+            map.invalidateSize();
+        });
+    </script>
+
+<footer>
+    &copy; 2023 SuapTour
+</footer>
+
+</body>
+</html>
