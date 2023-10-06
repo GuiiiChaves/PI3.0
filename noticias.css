@@ -171,20 +171,16 @@
   }
 
 
-
-
-  .navbar {
-    background-color: white;
-    overflow: hidden;
-    box-shadow: 5px 5px 10px white;
+/* Estilos do rodapé */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
 }
-
-.navbar {
-    background-color: white;
-    overflow: hidden;
-    box-shadow: 5px 5px 10px white;
-    position: relative; /* Alterado para relativo */
-    z-index: 1; /* Ordem de empilhamento alta */
-}
-
   
+
