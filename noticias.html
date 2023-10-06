@@ -70,11 +70,17 @@
                 <style>
                   /* Estilos para centralizar a imagem */
                   #titulo {
-                    text-align: center;
+                     text-align: center;
                     display: block;
                     margin: 0 auto;
                     margin-bottom: -400px;
                     margin-top: -200px;
+                    @media only screen and (max-width: 600px) {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
                   }
                 </style>
 									
