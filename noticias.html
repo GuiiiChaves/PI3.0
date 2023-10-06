@@ -4,50 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuapTour</title>
-    <link rel="stylesheet" href="menu.css">
+    
     <link rel="stylesheet" href="noticias.css">
-    <link rel="stylesheet" href="main.css">
-    <style>
-      
-      .navbar {
-    background-color: #fff; /* Cor de fundo da navbar (altere para a cor desejada) */
-    height: 80px; /* Altura desejada da navbar */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.navbar img {
-    max-height: 100%; /* Evita que a imagem ultrapasse a altura da navbar */
-    max-width: 100%; /* Ajusta a largura da imagem para ocupar todo o espaço disponível */
-    cursor: pointer;
-}
-
-.logo {
-    max-height: 100%; /* Evita que a imagem ultrapasse a altura da navbar */
-}
-    </style>
    
-    <body>
-      
-        <!--Menu -->
-<input type="checkbox" id="active">
-<label for="active" class="menu-btn"><span></span></label>
-<label for="active" class="close"></label>
+    <link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
 
-<div class="navbar">
-    <img src="logosuaptour.jpg" alt="logo-suaptour" class="logo">
-</div>
 
-<div class="wrapper">
-    <ul>
-                                 <li><a href="index.html">Início</a></li>
-        						 <li><a href="lazer.html">Lazer</a></li>
-       							 <li><a href="contato.html">Contato</a></li>
-       							 <li><a href="noticias.html">Novidades</a></li>
-        						 <li><a href="sobre.html">Sobre</a></li>
-    </ul>
-</div>
+    <style>
+   	/* Common styles for all screen sizes */
+     #menu {
+    background-color: black;
+}
+
+   .title {
+    font-weight: bolder;
+    font-size: 24px; /* Adjust the font size for mobile */
+}
+	</style>
+
+  
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+<a href="index.html" class="logo">
+    <span class="symbol">
+        <a href="pi.html"><img src="logosuaptour.jpg" alt="" style="width: 200px; height: 150px;" /></a>
+    </span>
+</a>
+
+
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="pi.html">Home</a></li>
+							<li><a href="lazer.html">Lazer</a></li>
+							<li><a href="noticias.html">Novidades</a></li>
+							<li><a href="sobre.html">Sobre</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1 id="titulo"><img src="novidades.png" style="width: 900px; height: 1000px;" /></h1>
+                <style>
+                  /* Estilos para centralizar a imagem */
+                  #titulo {
+                    text-align: center;
+                    display: block;
+                    margin: 0 auto;
+                    margin-bottom: -400px;
+                    margin-top: -200px;
+                    @media only screen and (max-width: 600px) {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+                  }
+                </style>
+									
+								<h2>Descubra o melhor de Suape com o <a href="pi.html">SuapTour!</a></h2>
+							</header>
     <div class="card-container">
         <div class="card card-1">
           <div class="card-img"></div>
@@ -102,11 +141,14 @@
           </div>
         </div>
       </div>
+      <!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+    
 </body>
 </html>
-
-
-
-
 
 
