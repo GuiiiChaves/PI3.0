@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuapTour</title>
-    
-    <link rel="stylesheet" href="noticias.css">
-   
+    <title>SuapTour</title>   
+    <link rel="stylesheet" href="noticias.css"> 
     <link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     </head>
 
 
     <style>
-   	/* Common styles for all screen sizes */
      #menu {
     background-color: black;
 }
@@ -21,6 +18,19 @@
    .title {
     font-weight: bolder;
     font-size: 24px; /* Adjust the font size for mobile */
+}
+
+@media (max-width: 768px) {
+    .logo-title-container {
+        text-align: center; 
+    }
+  
+  .title {
+        position: static; /* Remove absolute positioning on mobile */
+        font-size: 24px; /* Adjust the font size for mobile */
+        margin-top: 10px; /* Add space between logo and title on mobile */
+        text-align: center;
+    }
 }
 	</style>
 
