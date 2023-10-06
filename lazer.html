@@ -1,46 +1,30 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>SuapTour</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-		<link rel="stylesheet" href="assets/css/main.css" />
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuapTour</title>
+    
+    <link rel="stylesheet" href="noticias.css">
+   
+    <link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
+    </head>
 
-	<style>
-		/* Common styles for all screen sizes */
-#menu {
+
+    <style>
+   	/* Common styles for all screen sizes */
+     #menu {
     background-color: black;
 }
 
-.title {
+   .title {
     font-weight: bolder;
     font-size: 24px; /* Adjust the font size for mobile */
 }
-
-/* Media query for screens with a maximum width of 768px (typical mobile devices) */
-@media (max-width: 768px) {
-    .logo-title-container {
-        text-align: center; /* Center align the logo and title */
-    }
-
-    .title {
-        position: static; /* Remove absolute positioning on mobile */
-        font-size: 24px; /* Adjust the font size for mobile */
-        margin-top: 10px; /* Add space between logo and title on mobile */
-    }
-}
-
-
-
 	</style>
+
+  
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -52,9 +36,8 @@
 							<!-- Logo -->
 <a href="index.html" class="logo">
     <span class="symbol">
-        <img src="logosuaptour.jpg" alt="" style="width: 200px; height: 150px;" />
+        <a href="pi.html"><img src="logosuaptour.jpg" alt="" style="width: 200px; height: 150px;" /></a>
     </span>
-    <span class="title">Lazer</span>
 </a>
 
 
@@ -73,11 +56,10 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="index.html">Início</a></li>
-        						 <li><a href="lazer.html">Lazer</a></li>
-       							 <li><a href="contato.html">Contato</a></li>
-       							 <li><a href="noticias.html">Novidades</a></li>
-        						 <li><a href="sobre.html">Sobre</a></li>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="lazer.html">Lazer</a></li>
+							<li><a href="noticias.html">Novidades</a></li>
+							<li><a href="sobre.html">Sobre</a></li>
 						</ul>
 					</nav>
 
@@ -85,59 +67,90 @@
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1 style="text-align: center;">SuapTour!<br />
-									<br>
-									<br>
-                  <br>
-								Descubra o melhor de Suape com o <a href="index.html">SuapTour!</a></h1>
+								<h1 id="titulo"><img src="novidades.png" style="width: 900px; height: 1000px;" /></h1>
+                <style>
+                  /* Estilos para centralizar a imagem */
+                  #titulo {
+                    text-align: center;
+                    display: block;
+                    margin: 0 auto;
+                    margin-bottom: -400px;
+                    margin-top: -200px;
+                   
+      img {
+        max-width: 100%;
+        height: auto;
+        @media only screen and (max-width: 600px) {
+      }
+    }
+    }
+                  
+                </style>
+									
+								<h2>Descubra o melhor de Suape com o <a href="pi.html">SuapTour!</a></h2>
 							</header>
-							<section class="tiles">
-								<article class="style1">
-									<span class="image">
-										<img src="https://intercity-suape-hotel-cabo-de-santo-agostinho.ibooked.com.br/data/Photos/OriginalPhoto/5735/573597/573597486/Intercity-Suape-Costa-Dourada-Cabo-de-Santo-Agostinho-Exterior.JPEG" alt="" />
-									</span>
-									<a href="hoteis.html">
-										<h2>Hoteis</h2>
-										<div class="content">
-											<p>Os melhores hoteis de Suape</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="https://marettimo.com.br/blog/wp-content/uploads/2020/10/comidasparavendernapraia.jpg" alt="" />
-									</span>
-									<a href="restaurantes.html">
-										<h2>Restaurantes</h2>
-										<div class="content">
-											<p>Os melhores restaurantes de Suape!</p>
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="https://selfhotelcdn.nyc3.cdn.digitaloceanspaces.com/cloud/edge/12/photo_web_37999.webp" alt="" />
-									</span>
-									<a href="passeios.html">
-										<h2>Passeios</h2>
-										<div class="content">
-											<p>Os melhores passeios para voce e sua familia em Suape!</p>
-										</div>
-									</a>
-								</article>
-							</section>
-						</div>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
+    <div class="card-container">
+        <div class="card card-1">
+          <div class="card-img"></div>
+          <a href="" class="card-link">
+            <div class="card-img-hovered"></div>
+          </a>
+          <div class="card-info">
+            <div class="card-about">
+              <a class="card-tag tag-news">Porto</a>
+            <div class="card-time">13/09/2023</div>
+            </div>
+            <a target="_blank" href="https://www.suape.pe.gov.br/pt/noticias/1796-complexo-de-suape-divulga-planos-de-acao-climatica-para-municipios-do-territorio-estrategico-e-zona-industrial"><h1 class="card-title">Complexo de Suape divulga planos de ação climática para municípios do território estratégico e zona industrial</h1></a>
+          </div>
+        </div>
+        <div class="card card-2">
+          <div class="card-img"></div>
+          <a href="" class="card-link">
+            <div class="card-img-hovered"></div>
+          </a>
+          <div class="card-info">
+            <div class="card-about">
+              <a class="card-tag tag-news">Porto</a>
+            <div class="card-time">31/08/2023 </div>
+            </div>
+           <a target="_blank" href="https://www.suape.pe.gov.br/pt/noticias/1795-suape-lanca-plataforma-de-inovacao-aberta-para-auxiliar-empresas-do-complexo"><h1 class="card-title">Suape lança plataforma de inovação aberta para auxiliar empresas do complexo</h1></a>
+          </div>
+        </div>
+        <div class="card card-3">
+          <div class="card-img"></div>
+          <a href="" class="card-link">
+            <div class="card-img-hovered"></div>
+          </a>
+          <div class="card-info">
+            <div class="card-about">
+              <a class="card-tag tag-news">Porto</a>
+            <div class="card-time">18/08/2023</div>
+            </div>
+            <a target="_blank" href="https://www.suape.pe.gov.br/pt/noticias/1794-hub-de-veiculos-de-suape-movimenta-mais-de-tres-mil-veiculos-numa-unica-operacao"><h1 class="card-title">Hub de veículos de Suape movimenta mais de três mil veículos numa única operação</h1></a>
+          </div>
+        </div>
+        <div class="card card-4">
+          <div class="card-img"></div>
+          <a href="" class="card-link">
+            <div class="card-img-hovered"></div>
+          </a>
+          <div class="card-info">
+            <div class="card-about">
+              <a class="card-tag tag-news">Porto</a>
+            <div class="card-time">10/08/2023</div>
+            </div>
+            <a target="_blank" href="https://www.suape.pe.gov.br/pt/noticias/1793-suape-e-o-mais-premiado-no-portos-brasil-2023"><h1 class="card-title">Suape é o mais premiado no Portos + Brasil 2023</h1></a>
+          </div>
+        </div>
+      </div>
+      <!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
-	</body>
+    
+</body>
 </html>
+
 
