@@ -7,7 +7,9 @@ self.addEventListener('install', function(event) {
         '/css/style.css',
         '/js/main.js',
         '/logosuaptour.png'
-      ]);
+      ]).catch(function(error) {
+        console.error('Falha ao adicionar recursos à cache:', error);
+      });
     })
   );
 });
@@ -19,6 +21,7 @@ self.addEventListener('fetch', function(event) {
     })
   );
 });
+
 
 
   
