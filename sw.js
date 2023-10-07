@@ -6,7 +6,6 @@ self.addEventListener('install', function(event) {
         '/index.html',
         '/css/style.css',
         '/js/main.js',
-        '/logosuaptour.png'
       ]);
     })
   );
