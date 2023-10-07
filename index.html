@@ -68,15 +68,6 @@
 <div id="map"></div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
-
-        if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-      .then(function(registration) {
-        console.log('Service Worker registrado com sucesso:', registration);
-      })
-      .catch(function(error) {
-        console.log('Erro ao registrar o Service Worker:', error);
-      });
         
         var map = L.map('map').setView([-8.395194, -34.964031], 13); // Define as coordenadas de Recife
 
