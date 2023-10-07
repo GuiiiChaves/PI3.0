@@ -67,50 +67,56 @@
 
 <div id="map"></div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script>
-        
-        var map = L.map('map').setView([-8.395194, -34.964031], 13); // Define as coordenadas de Recife
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+                console.log('Service Worker registrado com sucesso:', registration);
+            })
+            .catch(function(error) {
+                console.log('Erro ao registrar o Service Worker:', error);
+            });
+    }
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-        }).addTo(map);
+    var map = L.map('map').setView([-8.395194, -34.964031], 13); // Define as coordenadas de Recife
 
-        // Adicione um marcador para a localização do usuário
-        navigator.geolocation.getCurrentPosition(function (position) {
-            var userLat = position.coords.latitude;
-            var userLng = position.coords.longitude;
-            L.marker([userLat, userLng]).addTo(map)
-                .bindPopup('Sua Localização Atual')
-                .openPopup();
-        });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+    }).addTo(map);
 
-        // Adicione marcadores para pontos pré-cadastrados em Recife
-        var points = [
+    // Adicione um marcador para a localização do usuário
+    navigator.geolocation.getCurrentPosition(function (position) {
+        var userLat = position.coords.latitude;
+        var userLng = position.coords.longitude;
+        L.marker([userLat, userLng]).addTo(map)
+            .bindPopup('Sua Localização Atual')
+            .openPopup();
+    });
+
+    // Adicione marcadores para pontos pré-cadastrados em Recife
+    var points = [
         { name: "Porto de Suape", latlng: [-8.393497, -34.997722] },
-            { name: "Complexo Industrial Portuário de Suape", latlng: [-8.402558, -35.007954] },
-            { name: "Praia de Suape", latlng: [-8.378678,  -34.994856] }, 
-            { name: "Parque Tecnológico de Suape", latlng: [-8.405000, -34.969333] },
-            { name: "Porto de Cruzeiros de Suape", latlng: [-8.391444,  -34.970778] },
-            { name: "Terminal de Contêineres de Suape (Tecon Suape)", latlng: [-8.390722, -34.970222] },
-            { name: "Reserva Biológica de Saltinho", latlng: [-8.3471 , -35.0053] },
-            { name: "Mirante de Suape", latlng: [-8.4002 , -34.9721] },
-            { name: "Praia de Enseada dos Corais", latlng: [ -8.5237 , -35.0023] },
-            { name: "Praia de Gaibu", latlng: [-8.4307 , -34.9604 ] },
-            
-            
-        ];
+        { name: "Complexo Industrial Portuário de Suape", latlng: [-8.402558, -35.007954] },
+        { name: "Praia de Suape", latlng: [-8.378678,  -34.994856] }, 
+        { name: "Parque Tecnológico de Suape", latlng: [-8.405000, -34.969333] },
+        { name: "Porto de Cruzeiros de Suape", latlng: [-8.391444,  -34.970778] },
+        { name: "Terminal de Contêineres de Suape (Tecon Suape)", latlng: [-8.390722, -34.970222] },
+        { name: "Reserva Biológica de Saltinho", latlng: [-8.3471 , -35.0053] },
+        { name: "Mirante de Suape", latlng: [-8.4002 , -34.9721] },
+        { name: "Praia de Enseada dos Corais", latlng: [ -8.5237 , -35.0023] },
+        { name: "Praia de Gaibu", latlng: [-8.4307 , -34.9604 ] },
+    ];
 
-        points.forEach(function (point) {
-            L.marker(point.latlng).addTo(map).bindPopup(point.name);
-        });
+    points.forEach(function (point) {
+        L.marker(point.latlng).addTo(map).bindPopup(point.name);
+    });
 
-        // Atualize o tamanho do mapa quando a janela for redimensionada
-        window.addEventListener('resize', function () {
-            map.invalidateSize();
-        });
+    // Atualize o tamanho do mapa quando a janela for redimensionada
+    window.addEventListener('resize', function () {
+        map.invalidateSize();
+    });
+</script>
 
-        
-    </script>
 
 <footer>
     &copy; 2023 SuapTour
